@@ -1,6 +1,11 @@
 * {
     box-sizing: border-box;
   }
+body {
+    background-image: url("file:///Users/enjimenji/Downloads/nasa-pd4lo70LdbI-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 #container {
     height: 100vh;
     margin: 0;
@@ -9,9 +14,9 @@
     justify-content: center;
     align-items: center;
     font-family: "Audiowide", sans-serif;
-    background-image: url("file:///Users/enjimenji/Downloads/nasa-pd4lo70LdbI-unsplash.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    
+    
+    
     color:whitesmoke;
 }
 
@@ -19,6 +24,7 @@
     display:flex;
     justify-content: space-evenly;
     width: 100%;
+    color: #555775;
 }
 
 .cards {
@@ -32,7 +38,11 @@
     background-image: url("file:///Users/enjimenji/Downloads/monica-garniga-XClNDg9Z9Ag-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    box-shadow: 10px 5px 5px rgb(43, 42, 42);
+}
 
+.cards > div:hover {
+    box-shadow: 0 0 3px 3px rgb(167, 39, 206);
 }
 
 button {
@@ -40,11 +50,41 @@ button {
     padding: 2vmin;
     font-size: 2.5vmin;
     border-radius: 4vmin;
-    border: 0.1vmin solid blueviolet;
-    color: rgb(76, 65, 236);
+    border: 0.1vmin solid grey;
+    color: grey;
+    font-family: "Audiowide", sans-serif;
+    box-shadow: 10px 5px 5px white;
   }
 
 button:hover {
     background-color: black;
     color: white;
+}
+
+@media (max-width: 375px) {
+    .scoreboard {
+        color:white;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    .cards {
+        margin-top: 35px;
+    }
+    button {
+        margin-top: 20vmin;
+    }
+}
+
+@media (min-width:376px) and (max-width: 768px) {
+    .scoreboard {
+        color:white;
+    }
+    button {
+        font-size: 1.5vmin;
+        font-family: "Audiowide", sans-serif;
+        box-shadow: 10px 5px 5px black;
+    }
 }
