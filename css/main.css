@@ -2,7 +2,7 @@
     box-sizing: border-box;
   }
 body {
-    background-image: url("file:///Users/enjimenji/Downloads/nasa-pd4lo70LdbI-unsplash.jpg");
+    background-image: url("https://i.imgur.com/9Yxr43S.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -35,7 +35,7 @@ body {
 }
 #cards > img {
     border: 0.2vmin solid grey;
-    background-image: url("file:///Users/enjimenji/Downloads/monica-garniga-XClNDg9Z9Ag-unsplash.jpg");
+    background-image: url("https://i.imgur.com/hljAiZT.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 10px 5px 5px rgb(43, 42, 42);
