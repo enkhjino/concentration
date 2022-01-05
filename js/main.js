@@ -53,6 +53,7 @@ function init() {
 function handleChoice(evt) {
     const cardIdx = parseInt(evt.target.id);
     const card = cards[cardIdx];
+    playAudio();
     if (ignoreClick || isNaN(cardIdx) || card.matched) return;
     if (selectedCard && selectedCard === card) {
         badGuessCount++;
@@ -60,6 +61,7 @@ function handleChoice(evt) {
     } else if (selectedCard) {
         //check for match
         if (card.img === selectedCard.img) {
+            matchedAudio();
             card.matched = selectedCard.matched = true;
             selectedCard = null;
             winner = cards.every(card => card.matched);
@@ -96,8 +98,6 @@ function buildShuffledCards() {
 
 //5
 function render() {
-    //let cardsHtml = '';
-    //let curIdx = 0;
     btnEl.style.visibility = winner ? 'visible' : 'hidden';
     cards.forEach(function (card, idx) {
         const src = card.matched || selectedCard === card ? card.img : CARD_BACK;
@@ -105,9 +105,26 @@ function render() {
     });
     //8
     if (winner) {
+        playWinAudio();
         msgEl.innerText = 'You Win!';
     } else {
         msgEl.innerText = `Mismatches: ${badGuessCount}`;
     }
 
+}
+
+
+function playAudio() {
+    var audio = document.getElementById("click");
+    audio.play();
+}
+
+function playWinAudio() {
+    var audio = document.getElementById("win");
+    audio.play();
+}
+
+function matchedAudio() {
+    var audio = document.getElementById("match");
+    audio.play();
 }
