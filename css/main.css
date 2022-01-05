@@ -33,15 +33,16 @@ body {
     grid-template-rows: repeat(4, 15vmin);
     gap: 1vmin;
 }
-#cards >div {
+#cards > img {
     border: 0.2vmin solid grey;
     background-image: url("file:///Users/enjimenji/Downloads/monica-garniga-XClNDg9Z9Ag-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 10px 5px 5px rgb(43, 42, 42);
+    border-radius: 2vmin;
 }
 
-#cards > div:hover {
+#cards > img:hover {
     box-shadow: 0 0 3px 3px rgb(167, 39, 206);
 }
 
