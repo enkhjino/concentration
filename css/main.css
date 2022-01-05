@@ -47,6 +47,7 @@ body {
 
 #cards > img:hover {
     box-shadow: 0 0 3px 3px rgb(167, 39, 206);
+    cursor: pointer;
 }
 
 button {
@@ -63,6 +64,7 @@ button {
 button:hover {
     background-color: black;
     color: white;
+    cursor: pointer;
 }
 
 @media (max-width: 375px) {
