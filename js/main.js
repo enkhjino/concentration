@@ -21,10 +21,7 @@ let cards;//cards array of obj x2
 let selectedCard;
 let badGuessCount;
 let ignoreClick;
-//let turn; //turn variable to remember whose turn (1, -1)
-//let winner; //winner variable represents which player won, a tie, a game in play.null -> game in progress; 1/-1 a player has won; 'T' -> Tie
-//let playerScores;//player scores to be updated after every pick as well as using to determine winner
-//let replay; //play again -> only appears when the game ends or tied
+let winner;
 
 /*----- cached element references -----*/
 //7
@@ -48,6 +45,7 @@ function init() {
     selectedCard = null;
     badGuessCount = 0;
     ignoreClick = false;
+    winner = false;
     render();
 }
 
@@ -64,6 +62,7 @@ function handleChoice(evt) {
         if (card.img === selectedCard.img) {
             card.matched = selectedCard.matched = true;
             selectedCard = null;
+            winner = cards.every(card => card.matched);
         } else {
             ignoreClick = true;
             badGuessCount++;
@@ -99,10 +98,16 @@ function buildShuffledCards() {
 function render() {
     //let cardsHtml = '';
     //let curIdx = 0;
+    btnEl.style.visibility = winner ? 'visible' : 'hidden';
     cards.forEach(function (card, idx) {
         const src = card.matched || selectedCard === card ? card.img : CARD_BACK;
         cardImgEls[idx].src = src;
     });
     //8
-    msgEl.innerText = `Mismatches: ${badGuessCount}`;
+    if (winner) {
+        msgEl.innerText = 'You Win!';
+    } else {
+        msgEl.innerText = `Mismatches: ${badGuessCount}`;
+    }
+
 }
