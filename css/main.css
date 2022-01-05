@@ -40,6 +40,9 @@ body {
     background-size: cover;
     box-shadow: 10px 5px 5px rgb(43, 42, 42);
     border-radius: 2vmin;
+    width:15vmin;
+    height:15vmin;
+    object-fit: cover;
 }
 
 #cards > img:hover {
