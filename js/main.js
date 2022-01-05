@@ -14,7 +14,7 @@ const SOURCE_CARDS = [
     { img: 'https://i.imgur.com/cRaFvbr.png', matched: false }
 ]
 //6
-const CARD_BACK = "file:///Users/enjimenji/Downloads/monica-garniga-XClNDg9Z9Ag-unsplash.jpg";
+const CARD_BACK = "https://i.imgur.com/hljAiZT.jpg";
 const SECOND_CARD_TIME = 3000;
 /*----- app's state (variables) -----*/
 let cards;//cards array of obj x2
