@@ -15,7 +15,7 @@ const SOURCE_CARDS = [
 ]
 //6
 const CARD_BACK = "https://i.imgur.com/hljAiZT.jpg";
-const SECOND_CARD_TIME = 3000;
+const SECOND_CARD_TIME = 2000;
 /*----- app's state (variables) -----*/
 let cards;//cards array of obj x2
 let selectedCard;

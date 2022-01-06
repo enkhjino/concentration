@@ -77,7 +77,8 @@ button:hover {
     }
 
     #cards {
-        margin-top: 35px;
+        grid-template-columns: repeat(4, 15vmin);
+        grid-template-rows: repeat(6, 15vmin);
     }
     button {
         margin-top: 20vmin;
