@@ -22,7 +22,8 @@ let selectedCard;
 let badGuessCount;
 let ignoreClick;
 let winner;
-
+var timerVar = setInterval(countTimer, 1000);
+var totalSeconds = 0;
 /*----- cached element references -----*/
 //7
 const btnEl = document.querySelector('button');
@@ -31,7 +32,7 @@ const cardImgEls = document.querySelectorAll('#cards > img');
 
 
 /*----- event listeners -----*/
-btnEl.addEventListener('click', init);
+btnEl.addEventListener('click', reset);
 document.getElementById('cards').addEventListener('click', handleChoice);
 
 
@@ -49,6 +50,10 @@ function init() {
     render();
 }
 
+function reset() {
+    init();
+    timerVar = setInterval(countTimer, 1000);
+}
 //9
 function handleChoice(evt) {
     const cardIdx = parseInt(evt.target.id);
@@ -106,14 +111,15 @@ function render() {
     //8
     if (winner) {
         playWinAudio();
+        myStopFunction();
         msgEl.innerText = 'You Win!';
+
     } else {
         msgEl.innerText = `Mismatches: ${badGuessCount}`;
     }
 
 }
-var timerVar = setInterval(countTimer, 1000);
-var totalSeconds = 0;
+
 function countTimer() {
     ++totalSeconds;
     var hour = Math.floor(totalSeconds / 3600);
@@ -143,4 +149,9 @@ function playWinAudio() {
 function matchedAudio() {
     var audio = document.getElementById("match");
     audio.play();
+}
+
+function myStopFunction() {
+    clearInterval(timerVar);
+    totalSeconds = 0;
 }
