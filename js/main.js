@@ -1,17 +1,17 @@
 /*----- constants -----*/
 const SOURCE_CARDS = [
-    { img: 'https://i.imgur.com/egWiMRQ.jpg', matched: false },
-    { img: 'https://i.imgur.com/yDGCwMt.jpg', matched: false },
-    { img: 'https://i.imgur.com/T0SVljJ.jpg', matched: false },
-    { img: 'https://i.imgur.com/gQ6fXZq.jpg', matched: false },
-    { img: 'https://i.imgur.com/vGIv57s.jpg', matched: false },
-    { img: 'https://i.imgur.com/z4Vtpeb.jpg', matched: false },
-    { img: 'https://i.imgur.com/0zlibP3.jpg', matched: false },
-    { img: 'https://i.imgur.com/DdcQ8L9.jpg', matched: false },
-    { img: 'https://i.imgur.com/qA5GhRB.png', matched: false },
-    { img: 'https://i.imgur.com/I7Y2yAW.png', matched: false },
-    { img: 'https://i.imgur.com/je3R2Ty.png', matched: false },
-    { img: 'https://i.imgur.com/cRaFvbr.png', matched: false }
+    { img: 'https://i.imgur.com/egWiMRQ.jpg', matched: false, name: 'Sun' },
+    { img: 'https://i.imgur.com/yDGCwMt.jpg', matched: false, name: 'Mercury' },
+    { img: 'https://i.imgur.com/T0SVljJ.jpg', matched: false, name: 'Venus' },
+    { img: 'https://i.imgur.com/gQ6fXZq.jpg', matched: false, name: 'Earth' },
+    { img: 'https://i.imgur.com/vGIv57s.jpg', matched: false, name: 'Mars' },
+    { img: 'https://i.imgur.com/z4Vtpeb.jpg', matched: false, name: 'Jupiter' },
+    { img: 'https://i.imgur.com/0zlibP3.jpg', matched: false, name: 'Saturn' },
+    { img: 'https://i.imgur.com/DdcQ8L9.jpg', matched: false, name: 'Uranus' },
+    { img: 'https://i.imgur.com/qA5GhRB.png', matched: false, name: 'Neptune' },
+    { img: 'https://i.imgur.com/I7Y2yAW.png', matched: false, name: 'Moon' },
+    { img: 'https://i.imgur.com/je3R2Ty.png', matched: false, name: 'Yuri Gagarin' },
+    { img: 'https://i.imgur.com/cRaFvbr.png', matched: false, name: 'Laika' }
 ]
 //6
 const CARD_BACK = "https://i.imgur.com/hljAiZT.jpg";
@@ -67,6 +67,7 @@ function handleChoice(evt) {
         //check for match
         if (card.img === selectedCard.img) {
             matchedAudio();
+            document.getElementById('name').innerText = `You matched : ${card.name}!`;
             card.matched = selectedCard.matched = true;
             selectedCard = null;
             winner = cards.every(card => card.matched);
