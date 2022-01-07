@@ -6,9 +6,11 @@ Laptop View
 <img src="https://i.imgur.com/ud9DbSE.png">
 
 iPad View
+
 <img src="https://i.imgur.com/vlxyxei.png">
 
 iPhone View
+
 <img src="https://i.imgur.com/psXbyww.png">
 
 
@@ -17,7 +19,7 @@ HTML, CSS, Javascript
 
 
 # Getting started:
-<a href="https://enkhjino.github.io/concentration/">Click here for a chance to play</a>
+<a href="https://enkhjino.github.io/concentration/">Click here to play the game!</a>
 
 
 # Next Steps:
