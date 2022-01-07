@@ -1,0 +1,75 @@
+/*1) Define required constants
+
+player = 1;
+computer = -1;
+empty = 0;
+
+2) Define required variables used to track the state of the game -MODEL
+
+board array to represent the cards
+turn variable to remember whose turn
+winner variable represents which player won, a tie, a game in play
+player scores to be updated after every pick as well as using to determine winner
+play again -> only appears when the game ends
+
+3) Store elements on the page that will be accessed in code more than once in variables to make code more concise,
+readable and performant.
+
+Store the 24 elements that represent the memory cards on the page.
+
+User will pick 2 cards one by one. The first card will face up and stay facing upwards until the second card is picked.
+If the 2 cards match then they will easy out of the board, and if they are not a match they will be flipped back at
+their exact location.
+
+4) Upon loading the app should:
+4.1) Initialize the state variable:
+-Initialize the board 6x4 with unique pair values. The 24 elements will "map" to each square, where index 0 maps to the
+top-left square and index 23 maps to the bottom-right square.
+-Initialize whose turn it is to 1 (player ). Player "computer" will be represented by -1.
+-Initialize winner to null to represent that there is no winner or tie yet. Winner will hold the player value (1 or -1)
+if there's a winner. Winner will hold a 'T' if there's a tie. Winner = more than 6 pairs of matching cards.
+-Initialize the player scores to 0.
+-Initialize the 'play again button" to invisible. Change to visible when there is a winner.
+4.2) Render those state variables to the page:
+- Render the board:
+-Loop over each of the 24 elements that represent the squares on the page, and for each iteration:
+-Use the index of the iteration to access the mapped value from the board array.
+5) Handle a player clicking a square
+5.1) Obtain the index of the cards(2) that was clicked by either:
+5.1.1) "Extracting" the index from an id assigned to the element in the HTML,
+5.2) If the board has already been picked, you cannot pick the same one. You must pick a different card and check if
+they hold the same value. If they do have the same value, the cards will disappear. And if they dont, they will be faced
+down at their exact location.
+5.3) If a player has found more than 6 pairs they automatically win. If both of the players have 6pairs they Tie.
+5.4) If both of the cards player picked are matching, then the cards will disappear and you cant pick those
+locations(index)
+5.5) Flip turns by multiplying turn by -1 (flips a 1 to -1, and vice-versa).
+5.6) Set the winner variable if there's a winner:
+5.6.1) If pick1===pick2, scores a point.
+5.6.4) If the total is more than 6pairs (12cards), we have a winner! Set winner to the board's value.
+5.7) If there's no winner, check if there's a tie:
+5.7.1) Set winner to 'T' if both players got exactly 6pairs.
+5.8) All state has been updated, so render the state to the page (step 4.2).
+
+6) Handle a player clicking the replay button
+
+6.1) Do steps 4.1 (initialize the state variables) and 4.2 (render).
+
+
+IDENTIFY THE APPLICATION'S STATE
+-The application needs to remember the location (index) at which the cards are being chosen.
+-Also remembers if its the first pick or the second pick. If they both match, they will disappear. If they are not a
+match then they will be flipped back. */
+
+//1. Sun
+//2. Mercury
+//3. Venus
+//4. Earth
+//5. Mars
+//6. Jupiter
+//7. Saturn
+//8. Uranus
+//9. Neptune
+//10. Yuri Gagarin
+//11. dog Laika
+//12. moon.
