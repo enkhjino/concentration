@@ -16,6 +16,8 @@ const SOURCE_CARDS = [
 //6
 const CARD_BACK = "https://i.imgur.com/hljAiZT.jpg";
 const SECOND_CARD_TIME = 2000;
+
+
 /*----- app's state (variables) -----*/
 let cards;//cards array of obj x2
 let selectedCard;
@@ -24,6 +26,8 @@ let ignoreClick;
 let winner;
 var timerVar = setInterval(countTimer, 1000);
 var totalSeconds = 0;
+
+
 /*----- cached element references -----*/
 //7
 const btnEl = document.querySelector('button');
@@ -114,11 +118,9 @@ function render() {
         playWinAudio();
         myStopFunction();
         msgEl.innerText = 'You Win!';
-
     } else {
         msgEl.innerText = `Mismatches: ${badGuessCount}`;
     }
-
 }
 
 function countTimer() {
@@ -134,8 +136,6 @@ function countTimer() {
         seconds = "0" + seconds;
     document.getElementById("timer").innerHTML = hour + ":" + minute + ":" + seconds;
 }
-
-
 
 function playAudio() {
     var audio = document.getElementById("click");

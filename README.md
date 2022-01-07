@@ -19,7 +19,7 @@ HTML, CSS, Javascript
 
 
 # Getting started:
-<a href="https://enkhjino.github.io/concentration/">Click here to play the game!</a>
+<a href="https://enkhjino.github.io/concentration/" target="_blank">Click here to play the game!</a>
 
 
 # Next Steps:
