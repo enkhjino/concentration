@@ -6,7 +6,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
-#container {
+
+.container {
     height: 100vh;
     margin: 0;
     display: flex;
@@ -15,6 +16,15 @@ body {
     align-items: center;
     font-family: "Audiowide", sans-serif;
     color:whitesmoke;
+}
+
+h1{
+    display: inline-block;
+    margin: auto 5vmin;
+}
+
+#name {
+    color:#fcc752;
 }
 
 .scoreboard {
@@ -64,6 +74,7 @@ button:hover {
     cursor: pointer;
 }
 
+
 @media (max-width: 375px) {
     .scoreboard {
         color:white;
@@ -71,6 +82,12 @@ button:hover {
         flex-direction: column;
         flex-wrap: wrap;
         align-content: center;
+        font-size: 12px;
+        margin: 10vmin 0vmin;
+    }
+    p { 
+        
+        text-align: center;
     }
 
     #cards {
@@ -79,6 +96,11 @@ button:hover {
     }
     button {
         margin-top: 20vmin;
+    }
+    h1{
+        display: inline-block;
+        margin: auto 1vmin;
+        font-size: 20px;
     }
 }
 
