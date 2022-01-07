@@ -2,13 +2,23 @@
 A card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn. The object of the game is to turn over pairs of matching cards.
 
 # Screenshots
-<img src="url">
+Laptop View
+<img src="https://i.imgur.com/ud9DbSE.png">
+
+iPad View
+<img src="https://i.imgur.com/vlxyxei.png">
+
+iPhone View
+<img src="https://i.imgur.com/psXbyww.png">
+
 
 # Technologies Used:
-html, css, javascript
+HTML, CSS, Javascript
+
 
 # Getting started:
-https://enkhjino.github.io/concentration/
+<a href="https://enkhjino.github.io/concentration/">Click here for a chance to play</a>
+
 
 # Next Steps:
-I would love to have a description of the images to pop up on the screen once the cards have been matched.
+I would love to add "educational" context by providing a description of the images to pop up on the screen once the cards have been matched. 
